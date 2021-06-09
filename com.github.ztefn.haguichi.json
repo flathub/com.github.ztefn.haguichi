@@ -37,8 +37,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ztefn/haguichi/releases/download/1.4.3/haguichi-1.4.3.tar.xz",
-                    "sha256": "e961bbb72f225d0aa547130452921c824c5cb43424deda4266d66626808b8e22"
+                    "url": "https://github.com/ztefn/haguichi/releases/download/1.4.4/haguichi-1.4.4.tar.xz",
+                    "sha256": "659047caaf6c8e310036e7b06ed503480abeb5fb56cb2dd45b7701586f1ddd9e"
                 }
             ]
         }
