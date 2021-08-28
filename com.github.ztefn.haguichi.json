@@ -11,6 +11,7 @@
 
         "--talk-name=org.freedesktop.Flatpak",
         "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher",
 
         "--share=network",
         "--share=ipc",
@@ -31,9 +32,13 @@
         "*.a"
     ],
     "modules": [
+        "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
         {
             "name": "haguichi",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Denable-appindicator=true"
+            ],
             "sources": [
                 {
                     "type": "archive",
