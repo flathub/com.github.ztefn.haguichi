@@ -70,6 +70,7 @@
             ]
         },
         {
+            "name": "fix-appstream-validation",
             "type": "patch",
             "path": "fix-appstream-validation.patch"
         }
