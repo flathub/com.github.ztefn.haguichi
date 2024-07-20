@@ -68,6 +68,10 @@
                     "sha256": "94242789f6d65c2878d5c6a515c18581e9a7fda05d47e5701b8ee12bce0f8b54"
                 }
             ]
+        },
+        {
+            "type": "patch",
+            "path": "fix-appstream-validation.patch"
         }
     ]
 }
