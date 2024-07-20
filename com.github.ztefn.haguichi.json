@@ -1,15 +1,21 @@
 {
     "app-id": "com.github.ztefn.haguichi",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "45",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.vala"
+    ],
     "command": "haguichi",
     "finish-args": [
+        "--device=dri",
+
         "--filesystem=/var/lib/logmein-hamachi:ro",
 
         "--system-talk-name=org.freedesktop.login1",
 
         "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.kde.StatusNotifierWatcher",
 
         "--share=network",
         "--share=ipc",
@@ -17,6 +23,10 @@
         "--socket=fallback-x11",
         "--socket=wayland"
     ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/vala/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
+    },
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -31,13 +41,35 @@
     ],
     "modules": [
         {
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbackend-gtk3=disabled",
+                "-Dbackend-gtk4=enabled",
+                "-Dbackend-qt5=disabled",
+                "-Ddocs=false",
+                "-Dtests=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+                    "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
+                }
+            ]
+        },
+        {
             "name": "haguichi",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ztefn/haguichi/releases/download/1.4.6/haguichi-1.4.6.tar.xz",
-                    "sha256": "0807e22914c16b55f6afac04a7943f049da5eccd8664ff7a47193ac133bb3330"
+                    "url": "https://github.com/ztefn/haguichi/releases/download/1.5.0/haguichi-1.5.0.tar.xz",
+                    "sha256": "94242789f6d65c2878d5c6a515c18581e9a7fda05d47e5701b8ee12bce0f8b54"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-appstream-validation.patch"
                 }
             ]
         }
