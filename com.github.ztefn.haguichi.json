@@ -70,6 +70,14 @@
                 {
                     "type": "patch",
                     "path": "fix-appstream-validation.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "change-dark-color.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "update-icons.patch"
                 }
             ]
         }
