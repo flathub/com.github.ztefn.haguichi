@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.ztefn.haguichi",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.vala"
@@ -54,8 +54,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
-                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac"
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
+                    "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f"
                 }
             ]
         },
@@ -65,8 +65,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ztefn/haguichi/releases/download/1.5.1/haguichi-1.5.1.tar.xz",
-                    "sha256": "e2f449d32cbe482809ad2385e32d643381328b4c61fb611bdae110dbc39c81ce"
+                    "url": "https://github.com/ztefn/haguichi/releases/download/1.5.2/haguichi-1.5.2.tar.xz",
+                    "sha256": "4ba6882f9ac2aed35050298dd46a83fcceb5af41752ac0ebf7cc08580b5a98f9"
                 }
             ]
         }
